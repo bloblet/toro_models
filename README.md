@@ -1,4 +1,6 @@
 Up to date library for keeping toro models consistant.
+## Editing
+Please make changes to the [developer][developer] branch, in a pull request.
 
 ## Usage
 
@@ -15,5 +17,5 @@ main() {
 ## Features and bugs
 
 Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
+[developer]: https://github.com/bloblet/toro_models/tree/developer
+[tracker]: https://github.com/bloblet/toro_models/issues
