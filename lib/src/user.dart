@@ -2,6 +2,7 @@ import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'portfolio_change_event.dart';
+import 'user_settings.dart';
 
 part 'user.g.dart';
 
@@ -36,6 +37,9 @@ class User extends HiveObject {
 
   @HiveField(8)
   List<String> friends;
+
+  @HiveField(9)
+  UserSettings settings;
 
   Map<String, dynamic> toJson() => _$UserToJson(this);
 
