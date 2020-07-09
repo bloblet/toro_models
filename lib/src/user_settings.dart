@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'user_settings.g.dart';
 
 @JsonSerializable(createFactory: true)
-@HiveType(typeId: 0)
+@HiveType(typeId: 3)
 class UserSettings extends HiveObject {
 
   @HiveField(0)
