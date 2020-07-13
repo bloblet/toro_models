@@ -8,6 +8,6 @@ class FetchCache extends HiveObject {
   DateTime lastUpdatedStocks;
 
   @HiveField(1)
-  double lastUpdatedBalance;
+  DateTime lastUpdatedBalance;
 
 }
