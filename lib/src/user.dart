@@ -43,5 +43,5 @@ class User extends HiveObject {
 
   Map<String, dynamic> toJson() => _$UserToJson(this);
 
-
+  static User fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
