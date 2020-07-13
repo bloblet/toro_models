@@ -18,7 +18,7 @@ class FetchCacheAdapter extends TypeAdapter<FetchCache> {
     };
     return FetchCache()
       ..lastUpdatedStocks = fields[0] as DateTime
-      ..lastUpdatedBalance = fields[1] as double;
+      ..lastUpdatedBalance = fields[1] as DateTime;
   }
 
   @override
