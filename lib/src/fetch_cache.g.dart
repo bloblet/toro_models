@@ -8,7 +8,7 @@ part of 'fetch_cache.dart';
 
 class FetchCacheAdapter extends TypeAdapter<FetchCache> {
   @override
-  final typeId = 3;
+  final typeId = 4;
 
   @override
   FetchCache read(BinaryReader reader) {
