@@ -41,6 +41,9 @@ class User extends HiveObject {
   @HiveField(9)
   UserSettings settings;
 
+  @HiveField(10)
+  int discriminator;
+  
   Map<String, dynamic> toJson() => _$UserToJson(this);
 
   static User fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

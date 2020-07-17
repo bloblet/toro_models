@@ -27,13 +27,14 @@ class UserAdapter extends TypeAdapter<User> {
       ..portfolioChanges =
           (fields[7] as Map)?.cast<DateTime, PortfolioChangeEvent>()
       ..friends = (fields[8] as List)?.cast<String>()
-      ..settings = fields[9] as UserSettings;
+      ..settings = fields[9] as UserSettings
+      ..discriminator = fields[10] as int;
   }
 
   @override
   void write(BinaryWriter writer, User obj) {
     writer
-      ..writeByte(10)
+      ..writeByte(11)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -53,7 +54,9 @@ class UserAdapter extends TypeAdapter<User> {
       ..writeByte(8)
       ..write(obj.friends)
       ..writeByte(9)
-      ..write(obj.settings);
+      ..write(obj.settings)
+      ..writeByte(10)
+      ..write(obj.discriminator);
   }
 }
 
@@ -84,7 +87,8 @@ User _$UserFromJson(Map<String, dynamic> json) {
     ..friends = (json['friends'] as List)?.map((e) => e as String)?.toList()
     ..settings = json['settings'] == null
         ? null
-        : UserSettings.fromJson(json['settings'] as Map<String, dynamic>);
+        : UserSettings.fromJson(json['settings'] as Map<String, dynamic>)
+    ..discriminator = json['discriminator'] as int;
 }
 
 Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
@@ -99,4 +103,5 @@ Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
           ?.map((k, e) => MapEntry(k.toIso8601String(), e)),
       'friends': instance.friends,
       'settings': instance.settings,
+      'discriminator': instance.discriminator,
     };

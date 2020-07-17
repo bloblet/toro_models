@@ -23,16 +23,16 @@ class UserSettings extends HiveObject {
   bool darkMode = false;
 
   @HiveField(5)
-  bool showBalanceToNonFollowers;
+  bool showBalanceToNonFollowers = true;
 
   @HiveField(6)
-  bool showPortfolioToNonFollowers;
+  bool showPortfolioToNonFollowers = true;
 
   @HiveField(7)
-  bool showFollowingToNonFollowers;
+  bool showFollowingToNonFollowers = true;
 
   @HiveField(8)
-  bool showAvatarToNonFollowers;
+  bool showAvatarToNonFollowers = true;
 
   static UserSettings fromJson(Map<String, dynamic> json) => _$UserSettingsFromJson(json);
   Map<String, dynamic> toJson() => _$UserSettingsToJson(this);
