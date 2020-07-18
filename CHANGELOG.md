@@ -1,3 +1,7 @@
+## 0.5.3
+
+- Add Follower
+
 ## 0.5.2
 
 - Add FetchCache
