@@ -1,3 +1,7 @@
+## 0.6.0
+
+- Add following/followers
+
 ## 0.5.3
 
 - Add Follower

@@ -36,14 +36,17 @@ class User extends HiveObject {
   Map<DateTime, PortfolioChangeEvent> portfolioChanges;
 
   @HiveField(8)
-  List<String> friends;
+  List<String> following;
 
   @HiveField(9)
-  UserSettings settings;
+  List<String> followers;
 
   @HiveField(10)
+  UserSettings settings;
+
+  @HiveField(11)
   int discriminator;
-  
+
   Map<String, dynamic> toJson() => _$UserToJson(this);
 
   static User fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

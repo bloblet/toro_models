@@ -1,7 +1,7 @@
 name: toro_models
 description: Up to date library for keeping toro models consistant.
 
-version: 0.5.3
+version: 0.6.0
 
 environment:
   sdk: '>=2.8.1 <3.0.0'
